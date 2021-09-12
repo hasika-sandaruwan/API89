@@ -18,6 +18,11 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
+
+app.get("/",(req,resp)=>{
+    resp.status(200).json({"message":"Success.."});
+})
+
 mongoose.connect(
     'mongodb://127.0.0.1:27017/thogakade89'
 ).then(() => {
